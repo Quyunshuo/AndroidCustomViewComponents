@@ -51,6 +51,7 @@ class PaintDoc : Paint() {
      * ## 用于设置描边宽度，单位是px
      * 当画笔的[android.graphics.Paint.Style]样式为[android.graphics.Paint.Style.FILL_AND_STROKE]
      * 和[android.graphics.Paint.Style.STROKE]时有效
+     * 一般而言，在Style起作用时，该函数的作用用于设置描边宽度，当Style不起作用时，用于设置画笔宽度
      * @param width Float
      */
     override fun setStrokeWidth(width: Float) {
