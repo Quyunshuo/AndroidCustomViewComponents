@@ -1,4 +1,4 @@
-package com.quyunshuo.drawingbasis
+package com.quyunshuo.drawingbasis.activity
 
 import androidx.viewbinding.ViewBinding
 import com.quyunshuo.base.BaseActivity
