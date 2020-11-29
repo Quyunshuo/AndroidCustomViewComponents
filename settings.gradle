@@ -1,2 +1,4 @@
+include ':lib_base'
+include ':DrawingBasis'
 include ':app'
 rootProject.name = "AndroidCustomViewComponents"
