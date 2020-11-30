@@ -75,4 +75,76 @@ class RectFDoc : RectF {
     override fun contains(left: Float, top: Float, right: Float, bottom: Float): Boolean {
         return super.contains(left, top, right, bottom)
     }
+
+    /**
+     * ## 用于判断当前Rect对象与传入的矩形是否相交
+     * 也可以使用Rect的静态方法[Rect.intersects]来判断两个矩形是否相交
+     * @param left Float
+     * @param top Float
+     * @param right Float
+     * @param bottom Float
+     * @return Boolean
+     */
+    override fun intersects(left: Float, top: Float, right: Float, bottom: Float): Boolean {
+        return super.intersects(left, top, right, bottom)
+    }
+
+    /**
+     * ## 用于判断当前Rect对象与传入的矩形是否相交
+     * 与[intersects]不同的是，该方法不仅会返回是否相交的结果，而且还会把相交部分的矩形赋给当前Rect对象
+     * 如果两个矩形不相交，则当前Rect对象的值不变
+     * @param r RectF 需要判断的矩形
+     * @return Boolean
+     */
+    override fun intersect(r: RectF): Boolean {
+        return super.intersect(r)
+    }
+
+    /**
+     * ## 用于判断当前Rect对象与传入的矩形是否相交
+     * 与[intersects]不同的是，该方法不仅会返回是否相交的结果，而且还会把相交部分的矩形赋给当前Rect对象
+     * 如果两个矩形不相交，则当前Rect对象的值不变
+     * @param left Float
+     * @param top Float
+     * @param right Float
+     * @param bottom Float
+     * @return Boolean
+     */
+    override fun intersect(left: Float, top: Float, right: Float, bottom: Float): Boolean {
+        return super.intersect(left, top, right, bottom)
+    }
+
+    /**
+     * ## 用于合并两个矩形
+     * 无论这两个矩形是否相交，取矩形最小左上角的点作为结果矩形的左上角点，取两个矩形最大右下角的点作为结果矩形的右下角点
+     * 如果要合并的矩形有一方为空，则将有值的一方作为最终结果
+     * @param r RectF 需要合并的矩形
+     */
+    override fun union(r: RectF) {
+        super.union(r)
+    }
+
+    /**
+     * ## 用于合并两个矩形
+     * 无论这两个矩形是否相交，取矩形最小左上角的点作为结果矩形的左上角点，取两个矩形最大右下角的点作为结果矩形的右下角点
+     * 如果要合并的矩形有一方为空，则将有值的一方作为最终结果
+     * @param left Float
+     * @param top Float
+     * @param right Float
+     * @param bottom Float
+     */
+    override fun union(left: Float, top: Float, right: Float, bottom: Float) {
+        super.union(left, top, right, bottom)
+    }
+
+    /**
+     * ## 合并矩形与某个点
+     * 先判断当前矩形与目标合并点的关系，如果不相交，则根据目标点(x,y)的位置，将目标点设置为当前矩形的左上角点或右下角点
+     * 如果当前矩形是一个空矩形，则最后的结果矩形为([0,0],[x,y])，即结果矩形的左上角点为[0,0],右下角点为[x,y]
+     * @param x Float
+     * @param y Float
+     */
+    override fun union(x: Float, y: Float) {
+        super.union(x, y)
+    }
 }

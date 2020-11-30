@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.View
 
@@ -39,5 +40,21 @@ class BasisView : View {
         paint.strokeWidth = 50F             // 设置画笔宽度 - 50px
 
         canvas?.drawCircle(190F, 200F, 150F, paint) // 画圆
+
+
+        // 合并两个矩形
+        val paint1 = Paint()
+        paint1.color = Color.YELLOW
+        paint1.style = Paint.Style.STROKE
+        val rect1 = Rect(500, 500, 600, 600)
+        val rect2 = Rect(800, 800, 900, 900)
+        // 分别画出源矩形
+        canvas?.drawRect(rect1, paint1)
+        canvas?.drawRect(rect2, paint1)
+
+        // 画出合并后的结果
+        rect1.union(rect2)
+        paint1.color = Color.LTGRAY
+        canvas?.drawRect(rect1, paint1)
     }
 }
