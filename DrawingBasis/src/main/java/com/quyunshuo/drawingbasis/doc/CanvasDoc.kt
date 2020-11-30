@@ -2,6 +2,8 @@ package com.quyunshuo.drawingbasis.doc
 
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.Rect
+import android.graphics.RectF
 
 /**
  * 画布文档类 用于展示画布的主要函数
@@ -102,5 +104,88 @@ class CanvasDoc : Canvas() {
     override fun drawPoints(pts: FloatArray?, offset: Int, count: Int, paint: Paint) {
         super.drawPoints(pts, offset, count, paint)
     }
-    // TODO: 11/29/20 矩形类相关及绘制矩形相关函数
+
+    /**
+     * ## 用于绘制一个矩形
+     * @param left Float 第一个点的X坐标
+     * @param top Float 第一个点的Y坐标
+     * @param right Float 第二个点的X坐标
+     * @param bottom Float 第二个点的Y坐标
+     * @param paint Paint 画笔
+     */
+    override fun drawRect(left: Float, top: Float, right: Float, bottom: Float, paint: Paint) {
+        super.drawRect(left, top, right, bottom, paint)
+    }
+
+    /**
+     * ## 用于绘制一个矩形
+     * @param rect RectF RectF实例
+     * @param paint Paint 画笔
+     */
+    override fun drawRect(rect: RectF, paint: Paint) {
+        super.drawRect(rect, paint)
+    }
+
+    /**
+     * ## 用于绘制一个矩形
+     * @param r Rect Rect实例
+     * @param paint Paint 画笔
+     */
+    override fun drawRect(r: Rect, paint: Paint) {
+        super.drawRect(r, paint)
+    }
+
+    /**
+     * ## 用于绘制一个圆角矩形
+     * 圆角矩形的圆角其实是由椭圆的一角形成的
+     * @param rect RectF 要绘制的矩形
+     * @param rx Float 生成圆角的椭圆的X轴半径
+     * @param ry Float 生成圆角的椭圆的Y轴半径
+     * @param paint Paint 画笔
+     */
+    override fun drawRoundRect(rect: RectF, rx: Float, ry: Float, paint: Paint) {
+        super.drawRoundRect(rect, rx, ry, paint)
+    }
+
+    /**
+     * ## 用于绘制一个椭圆
+     * 椭圆是根据矩形生成的，以矩形的长为椭圆的X轴，以矩形的宽为椭圆的Y轴
+     * @param oval RectF
+     * @param paint Paint
+     */
+    override fun drawOval(oval: RectF, paint: Paint) {
+        super.drawOval(oval, paint)
+    }
+
+    /**
+     * ## 用于绘制一个圆
+     * @param cx Float 圆心点的X轴坐标
+     * @param cy Float 圆心点的Y轴坐标
+     * @param radius Float 圆的半径
+     * @param paint Paint 画笔
+     */
+    override fun drawCircle(cx: Float, cy: Float, radius: Float, paint: Paint) {
+        super.drawCircle(cx, cy, radius, paint)
+    }
+
+    /**
+     * ## 用于绘制一个弧
+     * 弧是椭圆的一部分，而椭圆是根据矩形来生成的，所以弧也是根据矩形来生成的
+     * 当画笔设置为填充模式时，填充区域只限于圆弧的起始点和终点所形成的区域
+     * 当带有两边是，会讲两边及圆弧内部全部填充；如果没有两边，则只填充圆弧部分
+     * @param oval RectF 生成椭圆的矩形
+     * @param startAngle Float 弧开始的角度，以X轴正方向为0度
+     * @param sweepAngle Float 弧持续的角度
+     * @param useCenter Boolean 是否有弧的两边。为true时，表示带有两边；为false时，只有一条弧
+     * @param paint Paint 画笔
+     */
+    override fun drawArc(
+        oval: RectF,
+        startAngle: Float,
+        sweepAngle: Float,
+        useCenter: Boolean,
+        paint: Paint
+    ) {
+        super.drawArc(oval, startAngle, sweepAngle, useCenter, paint)
+    }
 }
