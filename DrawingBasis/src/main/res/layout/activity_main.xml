@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <com.quyunshuo.drawingbasis.view.BasisView
+    <com.quyunshuo.drawingbasis.view.RectUnionView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -9,12 +9,21 @@ import android.util.AttributeSet
 import android.view.View
 
 /**
- * 自定义View 画笔和画布初识
+ * 合并两个矩形
  *
  * @author Qu Yunshuo
- * @since 11/29/20 10:01 PM
+ * @since 11/30/20 10:20 PM
  */
-class BasisView : View {
+class RectUnionView : View {
+
+    private val mPaint = Paint().apply {
+        color = Color.BLUE
+        strokeWidth = 10F
+        style = Paint.Style.STROKE
+    }
+
+    private val mRect1 = Rect(100, 100, 200, 200)
+    private val mRect2 = Rect(500, 500, 600, 600)
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -31,13 +40,16 @@ class BasisView : View {
         defStyleRes: Int
     ) : super(context, attrs, defStyleAttr, defStyleRes)
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        // 分别画出源矩形
+        canvas.drawRect(mRect1, mPaint)
+        canvas.drawRect(mRect2, mPaint)
 
-        val paint = Paint()                 // 创建画笔实例
-        paint.color = Color.RED             // 设置画笔颜色 - 红色
-        paint.style = Paint.Style.STROKE    // 设置填充样式 - 描边
-        paint.strokeWidth = 50F             // 设置画笔宽度 - 50px
-        canvas?.drawCircle(190F, 200F, 150F, paint) // 画圆
+        // 合并两个矩形
+        mRect1.union(mRect2)
+        // 绘制出合并后的Rect
+        mPaint.color = Color.DKGRAY
+        canvas.drawRect(mRect1, mPaint)
     }
 }
