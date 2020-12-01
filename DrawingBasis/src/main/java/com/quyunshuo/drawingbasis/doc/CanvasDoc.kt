@@ -1,9 +1,6 @@
 package com.quyunshuo.drawingbasis.doc
 
-import android.graphics.Canvas
-import android.graphics.Paint
-import android.graphics.Rect
-import android.graphics.RectF
+import android.graphics.*
 
 /**
  * 画布文档类 用于展示画布的主要函数
@@ -187,5 +184,14 @@ class CanvasDoc : Canvas() {
         paint: Paint
     ) {
         super.drawArc(oval, startAngle, sweepAngle, useCenter, paint)
+    }
+
+    /**
+     * ## 用于绘制一条路径
+     * @param path Path
+     * @param paint Paint
+     */
+    override fun drawPath(path: Path, paint: Paint) {
+        super.drawPath(path, paint)
     }
 }

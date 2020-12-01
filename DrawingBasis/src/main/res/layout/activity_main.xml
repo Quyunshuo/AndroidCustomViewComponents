@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <com.quyunshuo.drawingbasis.view.RectUnionView
+    <com.quyunshuo.drawingbasis.view.PathAddRoundRectView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
