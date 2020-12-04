@@ -175,4 +175,45 @@ class PathDoc : Path() {
     ) {
         super.addArc(left, top, right, bottom, startAngle, sweepAngle)
     }
+
+    /**
+     * Path的填充模式
+     * 是指填充Path的哪部份
+     */
+    private fun test() {
+        // 默认值，当两个图形相交时，取相交部分显示
+        FillType.WINDING
+        // 取path所在并不相交的区域
+        FillType.EVEN_ODD
+        // 取path的外部区域
+        FillType.INVERSE_WINDING
+        // 取path的外部和相交区域
+        FillType.INVERSE_EVEN_ODD
+    }
+
+    /**
+     * ## 用于界定哪里算Path内部的算法
+     * 在使用画笔填充图形时，填充的肯定是图形内部，而该函数就是用于界定哪里算Path内部的算法，进而让Paint填充这部分图像
+     * @param ft FillType
+     */
+    override fun setFillType(ft: FillType) {
+        super.setFillType(ft)
+    }
+
+    /**
+     * ## 用于重置路径对象
+     * 该函数类似于新建一个路径对象，它的所有数据空间都会被回收并重新分配，但不会清除FillType
+     */
+    override fun reset() {
+        super.reset()
+    }
+
+    /**
+     * ## 用于重置路径对象
+     * 该函数会清除FillType及所有的直线、曲线、点的数据等，但是会保留数据结构
+     * 这样可以实现快速重用，提高一定的性能
+     */
+    override fun rewind() {
+        super.rewind()
+    }
 }
