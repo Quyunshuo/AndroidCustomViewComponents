@@ -194,4 +194,136 @@ class CanvasDoc : Canvas() {
     override fun drawPath(path: Path, paint: Paint) {
         super.drawPath(path, paint)
     }
+
+    /**
+     * ## 绘制文本
+     * @param text String 需要绘制的文本
+     * @param x Float 起始点的X坐标
+     * @param y Float 起始点的Y坐标
+     * @param paint Paint 画笔
+     */
+    override fun drawText(text: String, x: Float, y: Float, paint: Paint) {
+        super.drawText(text, x, y, paint)
+    }
+
+    /**
+     * ## 绘制文本
+     * @param text CharSequence 需要绘制的字符序列
+     * @param start Int 表示起始绘制字符所在字符串中的索引
+     * @param end Int 表示结束绘制字符所在字符串中的索引
+     * @param x Float 起始点的X坐标
+     * @param y Float 起始点的Y坐标
+     * @param paint Paint 画笔
+     */
+    override fun drawText(
+        text: CharSequence,
+        start: Int,
+        end: Int,
+        x: Float,
+        y: Float,
+        paint: Paint
+    ) {
+        super.drawText(text, start, end, x, y, paint)
+    }
+
+    /**
+     * ## 绘制文本
+     * @param text String 需要绘制的文本
+     * @param start Int 表示起始绘制字符所在字符串中的索引
+     * @param end Int 表示结束绘制字符所在字符串中的索引
+     * @param x Float 起始点的X坐标
+     * @param y Float 起始点的Y坐标
+     * @param paint Paint 画笔
+     */
+    override fun drawText(text: String, start: Int, end: Int, x: Float, y: Float, paint: Paint) {
+        super.drawText(text, start, end, x, y, paint)
+    }
+
+    /**
+     * ## 绘制文本
+     * @param text CharArray 需要绘制的字符数组
+     * @param index Int 指定起始绘制字符的位置
+     * @param count Int 指定从起始绘制字符开始绘制几个字符
+     * @param x Float 起始点的X坐标
+     * @param y Float 起始点的Y坐标
+     * @param paint Paint 画笔
+     */
+    override fun drawText(
+        text: CharArray,
+        index: Int,
+        count: Int,
+        x: Float,
+        y: Float,
+        paint: Paint
+    ) {
+        super.drawText(text, index, count, x, y, paint)
+    }
+
+    /**
+     * ## 用于指定每个要绘制的文字的具体位置
+     * @param text String 需要绘制的字符串
+     * @param pos FloatArray 要绘制的每个文字的具体位置，两两一组，{x1,y1,x2,y2}
+     * @param paint Paint 画笔
+     */
+    override fun drawPosText(text: String, pos: FloatArray, paint: Paint) {
+        super.drawPosText(text, pos, paint)
+    }
+
+    /**
+     * ## 用于指定每个要绘制的文字的具体位置
+     * @param text CharArray 需要绘制的字符串
+     * @param index Int 第一个要绘制的文字的索引
+     * @param count Int 要绘制的文字的个数，用来计算最后一个文字的位置，从第一个绘制的文字开始算起
+     * @param pos FloatArray 要绘制的每个文字的具体位置，两两一组，{x1,y1,x2,y2}
+     * @param paint Paint 画笔
+     */
+    override fun drawPosText(
+        text: CharArray,
+        index: Int,
+        count: Int,
+        pos: FloatArray,
+        paint: Paint
+    ) {
+        super.drawPosText(text, index, count, pos, paint)
+    }
+
+    /**
+     * ## 用于沿路经绘制文本
+     * @param text String 需要绘制的字符串
+     * @param path Path 路径
+     * @param hOffset Float 与路径起始点的水平偏移量
+     * @param vOffset Float 与路径中心的垂直偏移量
+     * @param paint Paint 画笔
+     */
+    override fun drawTextOnPath(
+        text: String,
+        path: Path,
+        hOffset: Float,
+        vOffset: Float,
+        paint: Paint
+    ) {
+        super.drawTextOnPath(text, path, hOffset, vOffset, paint)
+    }
+
+    /**
+     * ## 用于沿路经绘制文本-可截取一部分文字进行绘制
+     * @param text CharArray 需要绘制的字符串
+     * @param index Int 第一个要绘制的文字的索引
+     * @param count Int 要绘制的文字的个数，用来计算最后一个文字的位置，从第一个绘制的文字开始算起
+     * @param path Path 路径
+     * @param hOffset Float 与路径起始点的水平偏移量
+     * @param vOffset Float 与路径中心的垂直偏移量
+     * @param paint Paint 画笔
+     */
+    override fun drawTextOnPath(
+        text: CharArray,
+        index: Int,
+        count: Int,
+        path: Path,
+        hOffset: Float,
+        vOffset: Float,
+        paint: Paint
+    ) {
+        super.drawTextOnPath(text, index, count, path, hOffset, vOffset, paint)
+    }
 }

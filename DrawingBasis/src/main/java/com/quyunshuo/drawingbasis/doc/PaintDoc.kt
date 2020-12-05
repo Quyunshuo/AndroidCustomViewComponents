@@ -1,6 +1,7 @@
 package com.quyunshuo.drawingbasis.doc
 
 import android.graphics.Paint
+import android.graphics.Typeface
 
 /**
  * 画笔文档类 用于展示画笔的主要函数
@@ -56,5 +57,64 @@ class PaintDoc : Paint() {
      */
     override fun setStrokeWidth(width: Float) {
         super.setStrokeWidth(width)
+    }
+
+    /**
+     * ## 设置是否为粗体文字
+     * @param fakeBoldText Boolean
+     */
+    override fun setFakeBoldText(fakeBoldText: Boolean) {
+        super.setFakeBoldText(fakeBoldText)
+    }
+
+    /**
+     * ## 设置是否有下划线
+     * @param underlineText Boolean
+     */
+    override fun setUnderlineText(underlineText: Boolean) {
+        super.setUnderlineText(underlineText)
+    }
+
+    /**
+     * ## 设置字体水平倾斜度
+     * @param skewX Float 默认值为0，取负值时文字向右倾斜，取正值时文字向左倾斜，普通斜体字设置为-0.25
+     */
+    override fun setTextSkewX(skewX: Float) {
+        super.setTextSkewX(skewX)
+    }
+
+    /**
+     * ## 设置带有删除线效果
+     * @param strikeThruText Boolean
+     */
+    override fun setStrikeThruText(strikeThruText: Boolean) {
+        super.setStrikeThruText(strikeThruText)
+    }
+
+    /**
+     * ## 设置文本的绘画水平缩放比例
+     * @param scaleX Float 默认值为1.0，值 > 1.0会使文本更宽，值 < 1.0将缩小文本范围
+     */
+    override fun setTextScaleX(scaleX: Float) {
+        super.setTextScaleX(scaleX)
+    }
+
+    /**
+     * ## 用于设置所要绘制的字符串与起始点的相对位置
+     * @param align Align [Paint.Align.LEFT] 居左绘制，即通过drawText()函数指定的起始点的在最左侧，文字从起始点位置开始绘制
+     * [Paint.Align.CENTER] 居中绘制，即通过drawText()函数指定的起始点在文字中间位置
+     * [Paint.Align.RIGHT] 居右绘制，即通过drawText()函数指定的起始点在文字右侧位置
+     */
+    override fun setTextAlign(align: Align) {
+        super.setTextAlign(align)
+    }
+
+    /**
+     * ## 用于设置字体样式
+     * @param typeface Typeface是专门用来设置字体样式的类
+     * @return Typeface
+     */
+    override fun setTypeface(typeface: Typeface): Typeface {
+        return super.setTypeface(typeface)
     }
 }
