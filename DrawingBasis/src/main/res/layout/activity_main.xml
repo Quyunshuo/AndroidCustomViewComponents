@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <com.quyunshuo.drawingbasis.view.SpiderView
+    <com.quyunshuo.drawingbasis.view.DrawRegionView
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:background="@drawable/comm_bg"
