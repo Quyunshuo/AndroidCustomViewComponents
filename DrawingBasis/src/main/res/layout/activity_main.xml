@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <com.quyunshuo.drawingbasis.view.DrawRegionView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+    <com.quyunshuo.drawingbasis.view.CustomCircleView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@drawable/comm_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

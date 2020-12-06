@@ -326,4 +326,73 @@ class CanvasDoc : Canvas() {
     ) {
         super.drawTextOnPath(text, index, count, path, hOffset, vOffset, paint)
     }
+
+    /**
+     * ## 用于平移画布
+     * @param dx Float 水平方向平移的距离，正数为向正方向（向右）平移的量，负数为向负方向（向左）平移的量
+     * @param dy Float 垂直方向平移的距离，正数为向正方向（向下）平移的量，负数为向负方向（向上）平移的量
+     */
+    override fun translate(dx: Float, dy: Float) {
+        super.translate(dx, dy)
+    }
+
+    /**
+     * ## 用于对画布进行旋转
+     * 旋转中心点是原点（0,0）
+     * @param degrees Float 旋转的度数，正数指顺时针旋转，负数指逆时针旋转
+     */
+    override fun rotate(degrees: Float) {
+        super.rotate(degrees)
+    }
+
+    /**
+     * ## 用于变更坐标轴密度 也就是缩放
+     * @param sx Float 水平方向伸缩的比例
+     * @param sy Float 垂直方向伸缩的比例
+     */
+    override fun scale(sx: Float, sy: Float) {
+        super.scale(sx, sy)
+    }
+
+    /**
+     * ## 用于扭曲画布
+     * @param sx Float 将画布在X轴方向上倾斜相应的角度，sx为倾斜角度的正切值
+     * @param sy Float 将画布在Y轴方向上倾斜相应的角度，sy为倾斜角度的正切值
+     */
+    override fun skew(sx: Float, sy: Float) {
+        super.skew(sx, sy)
+    }
+
+    /**
+     * ## 用于裁切画布
+     * 在使用clip系列函数时需要禁用硬件加速功能
+     * @param path Path
+     * @return Boolean
+     */
+    override fun clipPath(path: Path): Boolean {
+        return super.clipPath(path)
+    }
+
+    /**
+     * ## 用于保存当前画布的状态，然后将其放入特定的栈中
+     * @return Int 当前所保存的画布所在栈的索引
+     */
+    override fun save(): Int {
+        return super.save()
+    }
+
+    /**
+     * ## 用于把保存画布的栈中顶层的画布状态取出，并按照这个状态恢复当前的画布，然后在这个画布上作画
+     */
+    override fun restore() {
+        super.restore()
+    }
+
+    /**
+     * ## 用于一直对保存画布的栈进行出栈，直到指定索引的画布出栈为止
+     * @param saveCount Int
+     */
+    override fun restoreToCount(saveCount: Int) {
+        super.restoreToCount(saveCount)
+    }
 }
