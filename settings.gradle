@@ -1,3 +1,4 @@
+include ':Animation'
 include ':lib_base'
 include ':DrawingBasis'
 include ':app'
