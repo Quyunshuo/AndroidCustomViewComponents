@@ -1,6 +1,5 @@
 package com.quyunshuo.drawingbasis.activity
 
-import androidx.viewbinding.ViewBinding
 import com.quyunshuo.base.BaseActivity
 import com.quyunshuo.drawingbasis.databinding.ActivityMainBinding
 
@@ -12,5 +11,5 @@ import com.quyunshuo.drawingbasis.databinding.ActivityMainBinding
  */
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    override fun ViewBinding.initView() {}
+    override fun ActivityMainBinding.initView() {}
 }

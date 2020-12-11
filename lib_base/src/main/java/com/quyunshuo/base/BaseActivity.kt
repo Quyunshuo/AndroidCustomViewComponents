@@ -27,5 +27,5 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         mBinding.initView()
     }
 
-    protected abstract fun ViewBinding.initView()
+    protected abstract fun VB.initView()
 }
