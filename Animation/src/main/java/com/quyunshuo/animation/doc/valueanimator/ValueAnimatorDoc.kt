@@ -1,5 +1,6 @@
 package com.quyunshuo.animation.doc.valueanimator
 
+import android.animation.TypeEvaluator
 import android.animation.ValueAnimator
 import android.util.Log
 
@@ -33,7 +34,6 @@ class ValueAnimatorDoc : ValueAnimator() {
 
     /**
      * ## 用于创建一个ValueAnimator
-     *
      * @param values IntArray 动画时的变化范围 比如ofInt(2,90,45)，就是从2->90->45，值越多，动画就越复杂
      */
     private fun ofInt(vararg values: Int) {
@@ -46,6 +46,17 @@ class ValueAnimatorDoc : ValueAnimator() {
      */
     private fun ofFloat(vararg values: Float) {
         ValueAnimator.ofFloat()
+    }
+
+    /**
+     * ## 用于构建一个ValueAnimator
+     * 可以传入任何类型的变量
+     * 示例[com.quyunshuo.animation.activity.MainActivity]
+     * @param evaluator TypeEvaluator<Any> 自定义的Evaluator，用于转换值
+     * @param values Array<out Any> 值
+     */
+    private fun ofObject(evaluator: TypeEvaluator<Any>, vararg values: Any) {
+        ValueAnimator.ofObject(evaluator, values)
     }
 
     /**
