@@ -1,6 +1,7 @@
 package com.quyunshuo.drawingbasis.doc
 
 import android.graphics.Paint
+import android.graphics.PathEffect
 import android.graphics.Typeface
 
 /**
@@ -117,4 +118,65 @@ class PaintDoc : Paint() {
     override fun setTypeface(typeface: Typeface): Typeface {
         return super.setTypeface(typeface)
     }
+
+    /**
+     * ## 用于设置路径样式
+     * 能实现复杂的路径效果样式
+     * @param effect PathEffect 样式 取值类型是PathEffect的子类
+     * @return PathEffect
+     */
+    override fun setPathEffect(effect: PathEffect?): PathEffect {
+        return super.setPathEffect(effect)
+    }
+
+    /**
+     * ## 用于设置线帽样式
+     * @param cap Cap 线帽样式 取值有[Paint.Cap.BUTT]无线帽，[Paint.Cap.ROUND]圆形线帽，[Paint.Cap.SQUARE]方形线帽
+     */
+    override fun setStrokeCap(cap: Cap?) {
+        super.setStrokeCap(cap)
+    }
+
+    /**
+     * ## 用于设置路径的转角样式
+     * @param join Join 转角样式 取值有[Paint.Join.MITER]结合处为锐角，[Paint.Join.ROUND]结合处为圆弧，[Paint.Join.BEVEL]结合处为直线
+     */
+    override fun setStrokeJoin(join: Join?) {
+        super.setStrokeJoin(join)
+    }
+
+    /**
+     * ## 用于开关抗抖动效果
+     * 抖动效果是指，在RGB颜色下很多色彩变化无法呈现，所以图像颜色渐变时，会有类似大马赛克的效果出现
+     * Android为了让色彩过渡不那么生硬，于是将相邻像素之间的颜色进行"中和"以呈现一种更为细腻的过渡色
+     * @param dither Boolean 是否开启
+     */
+    override fun setDither(dither: Boolean) {
+        super.setDither(dither)
+    }
+
+    /**
+     * ## 用于设置文字大小
+     * @param textSize Float 文字大小 单位是px
+     */
+    override fun setTextSize(textSize: Float) {
+        super.setTextSize(textSize)
+    }
+
+    /**
+     * ## 用于设置是否开启线性文本标识  目前基本不使用了
+     * @param linearText Boolean 是否开启
+     */
+    override fun setLinearText(linearText: Boolean) {
+        super.setLinearText(linearText)
+    }
+
+    /**
+     * ## 用于设置是否开启亚像素设置来绘制文本  有局限性和缺陷
+     * @param subpixelText Boolean 是否开启
+     */
+    override fun setSubpixelText(subpixelText: Boolean) {
+        super.setSubpixelText(subpixelText)
+    }
+
 }
