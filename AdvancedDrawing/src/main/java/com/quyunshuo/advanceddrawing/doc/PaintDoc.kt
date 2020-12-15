@@ -1,5 +1,7 @@
 package com.quyunshuo.advanceddrawing.doc
 
+import android.graphics.BlurMaskFilter
+import android.graphics.MaskFilter
 import android.graphics.Paint
 
 /**
@@ -30,5 +32,24 @@ class PaintDoc : Paint() {
      */
     override fun clearShadowLayer() {
         super.clearShadowLayer()
+    }
+
+    /**
+     * ## 用于设置MaskFilter
+     * @param maskfilter MaskFilter 取值有BlurMaskFilter（能实现发光效果）和EmbossMaskFilter（能实现浮雕效果）
+     * @return MaskFilter
+     */
+    override fun setMaskFilter(maskfilter: MaskFilter?): MaskFilter {
+        return super.setMaskFilter(maskfilter)
+    }
+
+    /**
+     * BlurMaskFilter构造函数
+     * @param radius Float 用来定义模糊半径，同样采用高斯模糊算法
+     * @param style Blur 发光样式取值有四种[BlurMaskFilter.Blur.INNER]内发光，
+     * [BlurMaskFilter.Blur.SOLID]外发光,[BlurMaskFilter.Blur.NORMAL]内外发光,[BlurMaskFilter.Blur.OUTER]仅显示发光效果
+     */
+    private fun testBlurMaskFilter(radius: Float, style: BlurMaskFilter.Blur) {
+        BlurMaskFilter(radius, style)
     }
 }
