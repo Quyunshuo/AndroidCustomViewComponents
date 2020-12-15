@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <com.quyunshuo.advanceddrawing.view.BesselView
+    <com.quyunshuo.advanceddrawing.view.ShadowLayerView
+        android:id="@+id/mShadowLayerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

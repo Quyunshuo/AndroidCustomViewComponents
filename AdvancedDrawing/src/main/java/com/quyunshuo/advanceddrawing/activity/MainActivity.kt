@@ -11,5 +11,11 @@ import com.quyunshuo.base.BaseActivity
  */
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    override fun ActivityMainBinding.initView() {}
+    override fun ActivityMainBinding.initView() {
+        var isShow = false
+        mShadowLayerView.setOnClickListener {
+            mShadowLayerView.setShadow(isShow)
+            isShow = !isShow
+        }
+    }
 }
