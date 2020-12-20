@@ -3,6 +3,7 @@ package com.quyunshuo.advanceddrawing.doc
 import android.graphics.BlurMaskFilter
 import android.graphics.MaskFilter
 import android.graphics.Paint
+import android.graphics.Shader
 
 /**
  * Paint进阶
@@ -51,5 +52,15 @@ class PaintDoc : Paint() {
      */
     private fun testBlurMaskFilter(radius: Float, style: BlurMaskFilter.Blur) {
         BlurMaskFilter(radius, style)
+    }
+
+    /**
+     * ## 设置着色器
+     * Shader 其实就是一个空类，它的主要功能是靠它的派生类来实现的
+     * @param shader Shader
+     * @return Shader
+     */
+    override fun setShader(shader: Shader?): Shader {
+        return super.setShader(shader)
     }
 }
