@@ -1,0 +1,7 @@
+apply from: '../base_module_build.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.quyunshuo.mixedmode"
+    }
+}

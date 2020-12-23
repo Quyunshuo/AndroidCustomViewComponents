@@ -1,3 +1,4 @@
+include ':MixedMode'
 include ':AdvancedDrawing'
 include ':Paint'
 include ':Animation'
