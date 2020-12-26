@@ -58,4 +58,24 @@ class PorterDuffXfermodeDoc : PorterDuffXfermode {
      *
      * [PorterDuff.Mode.SRC_ATOP]
      */
+
+    /**
+     * 目标图像模式
+     * [PorterDuff.Mode.DST]
+     * 在处理源图像所在区域的相交问题时，与Mode.SRC模式相反，全部以目标图像显示
+     *
+     * [PorterDuff.Mode.DST_IN]
+     *
+     * [PorterDuff.Mode.DST_OUT]
+     *
+     * [PorterDuff.Mode.DST_OVER]
+     *
+     * [PorterDuff.Mode.DST_ATOP]
+     */
+
+    /**
+     * 其他模式
+     * [PorterDuff.Mode.CLEAR]
+     * 源图像所在区域都会变成空白像素，起到了清空源图像所在区域图像的作用
+     */
 }
