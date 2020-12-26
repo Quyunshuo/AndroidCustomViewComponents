@@ -18,4 +18,25 @@ class PorterDuffXfermodeDoc : PorterDuffXfermode {
      * @constructor
      */
     constructor(mode: PorterDuff.Mode?) : super(mode)
+
+    /**
+     * 颜色叠加相关模式
+     * 这几种模式都是PS中存在的模式，是通过计算改变相交区域的颜色值的
+     * @see com.quyunshuo.mixedmode.view.TwitterView
+     *
+     * [PorterDuff.Mode.ADD] 饱和度相加
+     * 对SRC和DST两张图片相交区域的饱和度进行相加
+     *
+     * [PorterDuff.Mode.LIGHTEN] 变亮
+     * 对SRC和DST两张图片相交区域的亮度进行提高
+     *
+     * [PorterDuff.Mode.DARKEN] 变暗
+     * 对SRC和DST两张图片相交区域进行变暗
+     *
+     * [PorterDuff.Mode.MULTIPLY] 正片叠底
+     *
+     * [PorterDuff.Mode.OVERLAY] 叠加
+     *
+     * [PorterDuff.Mode.SCREEN] 滤色
+     */
 }
