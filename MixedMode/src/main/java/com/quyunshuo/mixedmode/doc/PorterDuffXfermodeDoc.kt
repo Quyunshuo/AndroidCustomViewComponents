@@ -39,4 +39,23 @@ class PorterDuffXfermodeDoc : PorterDuffXfermode {
      *
      * [PorterDuff.Mode.SCREEN] 滤色
      */
+
+    /**
+     * 源图像模式
+     *
+     * [PorterDuff.Mode.SRC]
+     * 在处理源图像所在区域的相交问题时，全部以源图像显示
+     *
+     * [PorterDuff.Mode.SRC_IN]
+     * 类似于[PorterDuff.Mode.SRC]模式，但是不同之处在于，在相交区域中当目标图像是空白像素时，与[PorterDuff.Mode.SRC_IN]模式所对应的区域也将变成空白区域
+     *
+     * [PorterDuff.Mode.SRC_OUT]
+     * 以目标图像的透明度的补值来调节源图像的透明度和饱和度，即当目标图像为空白像素时，就可以完全显示源图像，当目标图像的不透明度为100%时，相交区域为空白像素。
+     * 简单来说就是当目标图像有图像时结果显示空白像素，当目标图像没有图像时结果显示源图像
+     *
+     * [PorterDuff.Mode.SRC_OVER]
+     * 在目标图像的顶部绘制源图像
+     *
+     * [PorterDuff.Mode.SRC_ATOP]
+     */
 }

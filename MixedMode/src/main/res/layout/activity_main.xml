@@ -5,11 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <com.quyunshuo.mixedmode.view.PorterDuffXfermodeView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+<!--    <com.quyunshuo.mixedmode.view.PorterDuffXfermodeView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
 
-    <com.quyunshuo.mixedmode.view.TwitterView
+<!--    <com.quyunshuo.mixedmode.view.TwitterView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+    <com.quyunshuo.mixedmode.view.EraserView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
