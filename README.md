@@ -10,3 +10,4 @@
 * AdvancedDrawing       - 绘图篇 绘图进阶
 * MixedMode             - 绘图篇 混合模式
 * CanvasAndLayer        - 绘图篇 Canvas 与图层
+* AndroidCanvas         - 绘图篇 Android 画布
