@@ -57,4 +57,10 @@
         android:background="#E48800"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mArcShapeView" />
+
+    <com.quyunshuo.androidcanvas.view.PathShapeView
+        android:layout_width="250px"
+        android:layout_height="150px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mRoundRectShapeView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
