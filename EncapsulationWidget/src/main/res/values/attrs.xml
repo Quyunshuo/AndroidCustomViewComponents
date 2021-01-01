@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- declare-styleable name属性的取值对应着所定义的类名 也就是说要为哪个类添加自定义属性 那么这个name的取值就是这个类的类名  -->
+    <declare-styleable name="MyTextView">
+        <attr name="header" format="reference" />
+        <attr name="headerHeight" format="dimension" />
+        <attr name="headerVisibleHeight" format="dimension" />
+        <!-- flag 相当于代码中的常量 是自己定义的 -->
+        <attr name="age">
+            <flag name="child" value="10" />
+            <flag name="young" value="18" />
+            <flag name="old" value="60" />
+        </attr>
+        <!-- enum 枚举值 -->
+        <attr name="age2">
+            <enum name="child" value="10" />
+            <enum name="young" value="18" />
+            <enum name="old" value="60" />
+        </attr>
+    </declare-styleable>
+</resources>

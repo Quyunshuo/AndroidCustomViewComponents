@@ -11,3 +11,4 @@
 * MixedMode             - 绘图篇 混合模式
 * CanvasAndLayer        - 绘图篇 Canvas 与图层
 * AndroidCanvas         - 绘图篇 Android 画布
+* EncapsulationWidget   - 视图篇 封装控件
